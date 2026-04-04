@@ -1,0 +1,73 @@
+package com.example.nabila_sprinkle
+
+import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import com.example.bila_oronyx.R
+import com.example.bila_oronyx.databinding.ActivityRumusBangunBinding
+
+
+class RumusBangun : AppCompatActivity() {
+    private lateinit var binding: ActivityRumusBangunBinding
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        binding = ActivityRumusBangunBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
+        val btnSegitiga = findViewById<Button>(R.id.button2)
+        val etAlas = findViewById<EditText>(R.id.et_alas)
+        val etTinggi = findViewById<EditText>(R.id.et_tinggi)
+        val tvHasil = findViewById<TextView>(R.id.tv_hasil_segitiga)
+
+        // 1. Hapus semua baris findViewById di atas
+// 2. Gunakan kode di bawah ini di dalam onCreate
+
+        binding.button2.setOnClickListener {
+            // Logic untuk Segitiga
+            val alas = binding.etAlas.text.toString().toDoubleOrNull() ?: 0.0
+            val tinggi = binding.etTinggi.text.toString().toDoubleOrNull() ?: 0.0
+
+            val luas = 0.5 * alas * tinggi
+
+            binding.tvHasilSegitiga.text = "Hasil Luas: $luas"
+
+            android.util.Log.d("HASIL_HITUNG", "Hitung Segitiga: $luas")
+        }
+
+        binding.button2.setOnClickListener {
+            val alas = binding.etAlas.text.toString().toDoubleOrNull() ?: 0.0
+            val tinggi = binding.etTinggi.text.toString().toDoubleOrNull() ?: 0.0
+            val luas = 0.5 * alas * tinggi
+
+            binding.tvHasilSegitiga.text = "Hasil Luas: $luas"
+
+            // Munculkan Toast
+            Toast.makeText(this, "Input dulu yaa angkanya", Toast.LENGTH_SHORT).show()
+
+            android.util.Log.d("HASIL_HITUNG", "Hitung Segitiga: $luas")
+        }
+
+        binding.button3.setOnClickListener {
+            val sisi = binding.etSisi.text.toString().toDoubleOrNull() ?: 0.0
+            val volume = sisi * sisi * sisi
+
+            binding.tvHasilKubus.text = "Hasil Volume: $volume"
+
+            // Munculkan Toast
+            Toast.makeText(this, "Input dulu ya angkanya", Toast.LENGTH_SHORT).show()
+
+            android.util.Log.d("HASIL_HITUNG", "Hitung Kubus: $volume")
+        }
+    }
+}
