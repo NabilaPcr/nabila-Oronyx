@@ -25,13 +25,11 @@ class RumusBangun : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val btnSegitiga = findViewById<Button>(R.id.button2)
-        val etAlas = findViewById<EditText>(R.id.et_alas)
-        val etTinggi = findViewById<EditText>(R.id.et_tinggi)
-        val tvHasil = findViewById<TextView>(R.id.tv_hasil_segitiga)
+//        val btnSegitiga = findViewById<Button>(R.id.button2)
+//        val etAlas = findViewById<EditText>(R.id.et_alas)
+//        val etTinggi = findViewById<EditText>(R.id.et_tinggi)
+//        val tvHasil = findViewById<TextView>(R.id.tv_hasil_segitiga)
 
-        // 1. Hapus semua baris findViewById di atas
-// 2. Gunakan kode di bawah ini di dalam onCreate
 
         binding.button2.setOnClickListener {
             // Logic untuk Segitiga

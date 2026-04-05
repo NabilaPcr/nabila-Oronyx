@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradasi_2"
+    tools:context=".Welcome">
+
+    <TextView
+        android:id="@+id/judulGede"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="35dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/redrose"
+        android:text="Welcome= )"
+        android:textColor="#333333"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/deskripsi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/redrose"
+        android:text="Hi There! We are here to help you learn new skills.
+ The choice is yours Log in or Create Account"
+        android:textSize="16sp"
+        android:gravity="center"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="66dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/judulGede"/>
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="324dp"
+        android:layout_height="347dp"
+        android:layout_marginTop="28dp"
+        android:scaleType="centerInside"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deskripsi"
+        app:srcCompat="@drawable/logo" />
+
+    <Button
+        android:id="@+id/btnRegis"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/redrose"
+        android:textSize="15sp"
+        android:text="Create Account"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
+        tools:layout_editor_absoluteX="165dp"
+        tools:layout_editor_absoluteY="546dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        />
+
+    <Button
+        android:id="@+id/btnKembali"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/redrose"
+        android:textSize="15sp"
+        android:backgroundTint="@color/light_lavender"
+        android:text="Log In"
+        tools:layout_editor_absoluteX="165dp"
+        tools:layout_editor_absoluteY="617dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegis"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
