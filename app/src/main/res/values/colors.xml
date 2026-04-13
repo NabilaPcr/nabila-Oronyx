@@ -5,4 +5,5 @@
     <color name="soft_purple">#CE93D8</color>
     <color name="light_lavender">#B299FF</color>
     <color name="deep_purple">#5E50A1</color>
+    <color name="main_background_light_pastel">#F8F7FF</color> <color name="pastel_purple_header">#EAE5F5</color> <color name="soft_purple_card_stroke">#CE93D8</color> <color name="light_lavender_button">#B299FF</color> <color name="deep_purple_button">#5E50A1</color> <color name="pastel_input_background">#FFF0F5</color> <color name="kubus_input_background">#F0F8FF</color> <color name="text_black_soft">#424242</color>
 </resources>

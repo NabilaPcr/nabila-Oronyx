@@ -1,5 +1,6 @@
 package com.example.nabila_sprinkle
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -10,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.bila_oronyx.R
+import com.example.bila_oronyx.databinding.ActivityMainBinding
 import com.example.bila_oronyx.databinding.ActivityRumusBangunBinding
 
 
@@ -25,11 +27,6 @@ class RumusBangun : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-//        val btnSegitiga = findViewById<Button>(R.id.button2)
-//        val etAlas = findViewById<EditText>(R.id.et_alas)
-//        val etTinggi = findViewById<EditText>(R.id.et_tinggi)
-//        val tvHasil = findViewById<TextView>(R.id.tv_hasil_segitiga)
-
 
         binding.button2.setOnClickListener {
             // Logic untuk Segitiga
@@ -66,6 +63,10 @@ class RumusBangun : AppCompatActivity() {
             Toast.makeText(this, "Input dulu ya angkanya", Toast.LENGTH_SHORT).show()
 
             android.util.Log.d("HASIL_HITUNG", "Hitung Kubus: $volume")
+        }
+        binding.btnBack.setOnClickListener {
+            val intent = Intent(this, ActivityMainBinding::class.java)
+            startActivity(intent)
         }
     }
 }

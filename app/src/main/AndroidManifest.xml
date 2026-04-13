@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BilaOronyx">
         <activity
+            android:name=".ListBelajar"
+            android:exported="false" />
+        <activity
+            android:name=".Profil"
+            android:exported="false" />
+        <activity
             android:name=".Welcome"
             android:exported="false" />
         <activity

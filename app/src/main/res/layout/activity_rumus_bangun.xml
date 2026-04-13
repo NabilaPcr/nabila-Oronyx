@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F0F8FF"
+    android:background="#F8F7FF"
     android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,10 +19,10 @@
             android:id="@+id/headerTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:fontFamily="sans-serif-medium"
             android:text="Kalkulator Geometrik"
-            android:textColor="#FF8ABA"
+            android:textColor="@color/deep_purple"
             android:textSize="28sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +32,7 @@
             android:id="@+id/lineHeader"
             android:layout_width="60dp"
             android:layout_height="6dp"
-            android:background="#87CEFA"
+            android:background="@color/soft_purple"
             android:layout_marginTop="4dp"
             app:layout_constraintTop_toBottomOf="@id/headerTitle"
             app:layout_constraintStart_toStartOf="parent" />
@@ -41,12 +41,12 @@
             android:id="@+id/cardSegitiga"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            app:cardBackgroundColor="#FFFFFF"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="24dp"
             app:cardElevation="4dp"
             app:strokeWidth="2dp"
-            app:strokeColor="#FFC1D6"
+            app:strokeColor="@color/soft_purple"
             app:layout_constraintTop_toBottomOf="@+id/lineHeader">
 
             <LinearLayout
@@ -59,7 +59,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="✧ Segitiga"
-                    android:textColor="#FF8ABA"
+                    android:textColor="@color/deep_purple"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -67,7 +67,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    app:boxBackgroundColor="#FFF0F5"
+                    app:boxBackgroundColor="#F3E5F5"
                     app:boxCornerRadiusBottomEnd="12dp"
                     app:boxCornerRadiusBottomStart="12dp"
                     app:boxCornerRadiusTopEnd="12dp"
@@ -78,16 +78,16 @@
                         android:id="@+id/et_alas"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint=" Input Alas"
+                        android:hint="Input Alas"
                         android:inputType="numberDecimal"
-                        android:textColor="#5E5E5E" />
+                        android:textColor="#424242" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    app:boxBackgroundColor="#FFF0F5"
+                    app:boxBackgroundColor="#F3E5F5"
                     app:boxCornerRadiusBottomEnd="12dp"
                     app:boxCornerRadiusBottomStart="12dp"
                     app:boxCornerRadiusTopEnd="12dp"
@@ -100,7 +100,7 @@
                         android:layout_height="wrap_content"
                         android:hint="Input Tinggi"
                         android:inputType="numberDecimal"
-                        android:textColor="#5E5E5E" />
+                        android:textColor="#424242" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.button.MaterialButton
@@ -108,11 +108,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
                     android:layout_marginTop="20dp"
-                    android:text="Submit"
+                    android:text="Hitung Segitiga"
                     android:textAllCaps="false"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/white"
                     android:textStyle="bold"
-                    app:backgroundTint="#FFB2D1"
+                    app:backgroundTint="@color/light_lavender"
                     app:cornerRadius="16dp" />
 
                 <TextView
@@ -122,7 +122,7 @@
                     android:layout_marginTop="16dp"
                     android:text="Hasil: "
                     android:textAlignment="center"
-                    android:textColor="#FF8ABA"
+                    android:textColor="@color/deep_purple"
                     android:textSize="18sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -132,15 +132,13 @@
             android:id="@+id/cardKubus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="32dp"
-            app:cardBackgroundColor="#FFFFFF"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="24dp"
             app:cardElevation="4dp"
             app:strokeWidth="2dp"
-            app:strokeColor="#BFEFFF"
-            app:layout_constraintTop_toBottomOf="@+id/cardSegitiga"
-            app:layout_constraintBottom_toBottomOf="parent">
+            app:strokeColor="@color/light_lavender"
+            app:layout_constraintTop_toBottomOf="@+id/cardSegitiga">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -152,7 +150,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="✧ Kubus"
-                    android:textColor="#4682B4"
+                    android:textColor="@color/deep_purple"
                     android:textStyle="bold"
                     android:textSize="18sp"/>
 
@@ -160,7 +158,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    app:boxBackgroundColor="#F0F8FF"
+                    app:boxBackgroundColor="#EDE7F6"
                     app:boxCornerRadiusTopStart="12dp"
                     app:boxCornerRadiusTopEnd="12dp"
                     app:boxCornerRadiusBottomStart="12dp"
@@ -171,9 +169,9 @@
                         android:id="@+id/et_sisi"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Input sisi"
+                        android:hint="Input Sisi"
                         android:inputType="numberDecimal"
-                        android:textColor="#5E5E5E" />
+                        android:textColor="#424242" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.button.MaterialButton
@@ -181,11 +179,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
                     android:layout_marginTop="20dp"
-                    android:text="Submit"
+                    android:text="Hitung Kubus"
                     android:textAllCaps="false"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/white"
                     android:textStyle="bold"
-                    app:backgroundTint="#87CEFA"
+                    app:backgroundTint="@color/deep_purple"
                     app:cornerRadius="16dp" />
 
                 <TextView
@@ -195,11 +193,28 @@
                     android:layout_marginTop="16dp"
                     android:text="Hasil: "
                     android:textAlignment="center"
-                    android:textColor="#4682B4"
+                    android:textColor="@color/deep_purple"
                     android:textStyle="bold"
                     android:textSize="18sp" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBack"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="32dp"
+            android:text="Kembali Ke Menu"
+            android:textAllCaps="false"
+            android:textColor="@color/deep_purple"
+            app:cornerRadius="12dp"
+            app:strokeColor="@color/deep_purple"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardKubus" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

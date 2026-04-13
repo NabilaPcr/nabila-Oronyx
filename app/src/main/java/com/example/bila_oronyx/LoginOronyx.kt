@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.bila_oronyx.databinding.ActivityLoginOronyxBinding
+import com.example.bila_oronyx.databinding.ActivityMainBinding
 
 
 class LoginOronyx : AppCompatActivity() {
@@ -38,9 +39,9 @@ class LoginOronyx : AppCompatActivity() {
 
             } else {
 
-                val intent = Intent(this, Welcome::class.java)
+                val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
-                finish()
+
 
             }
         }
