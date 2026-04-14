@@ -31,7 +31,6 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnRumus.setOnClickListener {
             val intent = Intent(this, RumusBangun::class.java)
-            // Mengirim data judul dan deskripsi sesuai instruksi
             intent.putExtra("judul", "Kalkulator Geometrik")
             intent.putExtra("deskripsi", "Hitung luas dan volume dengan mudah")
             startActivity(intent)
@@ -55,7 +54,7 @@ class MainActivity : AppCompatActivity() {
                 .setTitle("Konfirmasi Logout")
                 .setMessage("Apakah Anda yakin ingin keluar?")
                 .setPositiveButton("Ya") { _, _ ->
-                    val intent = Intent(this, LoginOronyx::class.java) // Ganti sesuai nama activity loginmu
+                    val intent = Intent(this, LoginOronyx::class.java)
                     intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     startActivity(intent)
                 }

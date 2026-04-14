@@ -47,7 +47,6 @@ class RumusBangun : AppCompatActivity() {
 
             binding.tvHasilSegitiga.text = "Hasil Luas: $luas"
 
-            // Munculkan Toast
             Toast.makeText(this, "Input dulu yaa angkanya", Toast.LENGTH_SHORT).show()
 
             android.util.Log.d("HASIL_HITUNG", "Hitung Segitiga: $luas")
@@ -58,8 +57,6 @@ class RumusBangun : AppCompatActivity() {
             val volume = sisi * sisi * sisi
 
             binding.tvHasilKubus.text = "Hasil Volume: $volume"
-
-            // Munculkan Toast
             Toast.makeText(this, "Input dulu ya angkanya", Toast.LENGTH_SHORT).show()
 
             android.util.Log.d("HASIL_HITUNG", "Hitung Kubus: $volume")
