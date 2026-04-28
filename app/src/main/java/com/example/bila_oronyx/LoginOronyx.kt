@@ -1,5 +1,6 @@
 package com.example.bila_oronyx
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
@@ -8,44 +9,44 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.bila_oronyx.databinding.ActivityLoginOronyxBinding
-import com.example.bila_oronyx.databinding.ActivityMainBinding
-
 
 class LoginOronyx : AppCompatActivity() {
     private lateinit var binding: ActivityLoginOronyxBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         binding = ActivityLoginOronyxBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        binding.btnLogin.setOnClickListener {
+        val sharedPref = getSharedPreferences("user_pref", Context.MODE_PRIVATE)
 
+        binding.btnLogin.setOnClickListener {
             val username = binding.inputUser.text.toString().trim()
             val password = binding.inputPassword.text.toString().trim()
 
             if (username.isEmpty() || password.isEmpty()) {
-
                 Toast.makeText(
                     this,
                     "Username dan Passwordnya diisi dulu ya!",
                     Toast.LENGTH_SHORT
                 ).show()
-
             } else {
+                val editor = sharedPref.edit()
+                editor.putBoolean("isLogin", true)
+                editor.putString("username", username)
+                editor.apply()
 
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
-
-
+                finish()
             }
         }
-
-
     }
 }

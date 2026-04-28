@@ -1,16 +1,14 @@
 package com.example.bila_oronyx
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.bila_oronyx.databinding.ActivityListBelajarBinding
-import com.example.bila_oronyx.databinding.ActivityLoginOronyxBinding
 import com.example.bila_oronyx.databinding.ActivityMainBinding
-import com.example.bila_oronyx.databinding.ActivityProfilBinding
-import com.example.nabila_sprinkle.RumusBangun // Pastikan package ini sesuai
+import com.example.nabila_sprinkle.RumusBangun
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 
@@ -28,6 +26,8 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val sharedPref = getSharedPreferences("user_pref", Context.MODE_PRIVATE)
 
         binding.btnRumus.setOnClickListener {
             val intent = Intent(this, RumusBangun::class.java)
@@ -48,15 +48,26 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // Tombol 4: Logout dengan Alert Dialog & SnackBar
+        binding.btnWebView.setOnClickListener {
+            val intent = Intent(this, BeritaWebActivity::class.java)
+            startActivity(intent)
+        }
+
         binding.btnLogout.setOnClickListener {
             MaterialAlertDialogBuilder(this)
                 .setTitle("Konfirmasi Logout")
                 .setMessage("Apakah Anda yakin ingin keluar?")
-                .setPositiveButton("Ya") { _, _ ->
+                .setPositiveButton("Ya") { dialog, _ ->
+                    val editor = sharedPref.edit()
+                    editor.clear()
+                    editor.apply()
+
+                    dialog.dismiss()
+
                     val intent = Intent(this, LoginOronyx::class.java)
                     intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     startActivity(intent)
+                    finish()
                 }
                 .setNegativeButton("Tidak") { dialog, _ ->
                     dialog.dismiss()

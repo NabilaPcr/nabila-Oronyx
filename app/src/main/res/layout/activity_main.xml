@@ -5,139 +5,155 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_gradasi_2"
+    android:background="#F1F8E9"
     tools:context=".MainActivity">
 
+    <View
+        android:id="@+id/headerBg"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@color/sida_dark_green"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
-        android:id="@+id/btnHello"
+        android:id="@+id/tvWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:text="Selamat Datang!"
+        android:layout_marginStart="24dp"
+        android:text="Halo, Selamat Datang!"
         android:fontFamily="@font/redrose"
-        android:textColor="@color/deep_purple"
-        android:textSize="26sp"
+        android:textColor="@color/white"
+        android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/subTitle"
+        android:id="@+id/tvSub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pilih menu untuk memulai"
+        android:text="SISTEM INFORMASI KEBENCANAAN"
         android:fontFamily="@font/redrose"
-        android:textSize="16sp"
-        android:textColor="@color/soft_purple"
-        app:layout_constraintTop_toBottomOf="@id/btnHello"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:textSize="14sp"
+        android:textColor="#B9F6CA"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcome"
+        app:layout_constraintStart_toStartOf="@id/tvWelcome"/>
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cardRumus"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="40dp"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="4dp"
-        app:strokeColor="@color/soft_purple"
-        app:strokeWidth="1dp"
-        app:layout_constraintEnd_toStartOf="@+id/cardCustom1"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/subTitle">
+    <LinearLayout
+        android:id="@+id/menuLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-60dp"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:weightSum="2"
+        app:layout_constraintTop_toBottomOf="@id/headerBg">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical">
-            <Button
-                android:id="@+id/btnRumus"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Kalkulator"
-                android:fontFamily="@font/redrose"
-                android:textColor="@color/deep_purple"
-                android:textStyle="bold" />
-        </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardRumus"
+            android:layout_width="0dp"
+            android:layout_height="160dp"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="12dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/btnRumus"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="KALKULATOR"
+                    android:fontFamily="@font/redrose"
+                    android:textColor="@color/sida_dark_green"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cardCustom1"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="20dp"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="4dp"
-        app:strokeColor="@color/soft_purple"
-        app:strokeWidth="1dp"
-        app:layout_constraintBottom_toBottomOf="@+id/cardRumus"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cardRumus"
-        app:layout_constraintTop_toTopOf="@+id/cardRumus">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical">
-            <Button
-                android:id="@+id/btnCustom1"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Profil"
-                android:fontFamily="@font/redrose"
-                android:textColor="@color/deep_purple"
-                android:textStyle="bold" />
-        </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardCustom1"
+            android:layout_width="0dp"
+            android:layout_height="160dp"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="12dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/btnCustom1"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PROFIL"
+                    android:fontFamily="@font/redrose"
+                    android:textColor="@color/sida_dark_green"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardCustom2"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="40dp"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="4dp"
-        app:cardBackgroundColor="@color/light_lavender"
-        app:layout_constraintTop_toBottomOf="@+id/cardRumus">
-
-        <LinearLayout
+        android:layout_height="80dp"
+        android:layout_marginHorizontal="24dp"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="@color/sida_dark_green"
+        app:layout_constraintTop_toBottomOf="@+id/menuLayout">
+        <Button
+            android:id="@+id/btnCustom2"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center">
-            <Button
-                android:id="@+id/btnCustom2"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="To Do List"
-                android:fontFamily="@font/redrose"
-                android:textColor="@color/white"
-                android:textStyle="bold" />
-        </LinearLayout>
+            android:text="TO DO LIST KEGIATAN"
+            android:fontFamily="@font/redrose"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnWebView"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="12dp"
+        android:text="Web SiDa"
+        android:fontFamily="@font/redrose"
+        android:textAllCaps="false"
+        app:backgroundTint="@color/sida_green"
+        app:cornerRadius="20dp"
+        app:elevation="6dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnLogout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardCustom2" />
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="12dp"
         android:text="Logout"
         android:fontFamily="@font/redrose"
         android:textAllCaps="false"
-        android:paddingLeft="30dp"
-        android:paddingRight="30dp"
-        app:cornerRadius="12dp"
-        app:backgroundTint="@color/deep_purple"
+        app:backgroundTint="@color/sida_red"
+        app:cornerRadius="20dp"
+        app:elevation="6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnWebView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardCustom2" />
+        app:layout_constraintStart_toEndOf="@+id/btnWebView"
+        app:layout_constraintTop_toTopOf="@+id/btnWebView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
