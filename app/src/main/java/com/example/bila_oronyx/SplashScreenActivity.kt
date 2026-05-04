@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.example.bila_oronyx.pertemuan3.LoginOronyx
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -20,7 +21,7 @@ class SplashScreenActivity : AppCompatActivity() {
             delay(2000)
 
             if (isLogin) {
-                val intent = Intent(this@SplashScreenActivity, MainActivity::class.java)
+                val intent = Intent(this@SplashScreenActivity, BaseActivity::class.java)
                 startActivity(intent)
             } else {
                 val intent = Intent(this@SplashScreenActivity, LoginOronyx::class.java)

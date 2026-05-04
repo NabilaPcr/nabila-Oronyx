@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+<!--    <uses-permission android:name="android.permission.INTERNET" />-->
 
     <application
         android:allowBackup="true"
@@ -12,13 +12,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.BilaOronyx">
+        android:theme="@style/Theme.BilaOronyx"
+        android:usesCleartextTraffic="true">
         <activity
             android:name=".SplashScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BaseActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -26,25 +30,25 @@
             android:name=".BeritaWebActivity"
             android:exported="false" />
         <activity
-            android:name=".Welcome"
+            android:name=".pertemuan3.Welcome"
             android:exported="false" />
         <activity
-            android:name=".ListBelajar"
+            android:name=".pertemuan4.ListBelajar"
             android:exported="false" />
         <activity
-            android:name=".Profil"
+            android:name=".pertemuan4.Profil"
             android:exported="false" />
         <activity
-            android:name=".LoginOronyx"
+            android:name=".pertemuan3.LoginOronyx"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".BeritaActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
-            android:name="com.example.nabila_sprinkle.RumusBangun"
+            android:name=".pertemuan2.RumusBangun"
             android:exported="false" />
     </application>
 

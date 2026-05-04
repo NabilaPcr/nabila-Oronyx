@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_gradasi_2"
-    tools:context=".Welcome">
+    tools:context=".pertemuan3.Welcome">
 
     <TextView
         android:id="@+id/judulGede"

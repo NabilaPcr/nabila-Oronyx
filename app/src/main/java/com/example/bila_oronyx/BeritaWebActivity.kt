@@ -29,7 +29,7 @@ class BeritaWebActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
         supportActionBar?.apply {
-            title = "Reading Mode 📖"
+            title = "Sistem Informasi SIDA"
             setDisplayHomeAsUpEnabled(true)
             setHomeAsUpIndicator(R.drawable.ic_arrow)
         }

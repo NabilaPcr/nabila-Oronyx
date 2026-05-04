@@ -8,7 +8,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.bila_oronyx.databinding.ActivityMainBinding
-import com.example.nabila_sprinkle.RumusBangun
+import com.example.bila_oronyx.pertemuan2.RumusBangun
+import com.example.bila_oronyx.pertemuan3.LoginOronyx
+import com.example.bila_oronyx.pertemuan4.ListBelajar
+import com.example.bila_oronyx.pertemuan4.Profil
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 
@@ -36,13 +39,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        binding.btnCustom1.setOnClickListener {
+        binding.btnProfil.setOnClickListener {
             val intent = Intent(this, Profil::class.java)
             intent.putExtra("judul", "Profil Pengguna")
             startActivity(intent)
         }
 
-        binding.btnCustom2.setOnClickListener {
+        binding.btnList.setOnClickListener {
             val intent = Intent(this, ListBelajar::class.java)
             intent.putExtra("judul", "Daftar Tugas Belajar")
             startActivity(intent)

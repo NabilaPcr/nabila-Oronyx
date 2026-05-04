@@ -1,4 +1,4 @@
-package com.example.bila_oronyx
+package com.example.bila_oronyx.pertemuan3
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,8 +6,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.bila_oronyx.databinding.ActivityLoginOronyxBinding
-import com.example.bila_oronyx.databinding.ActivityMainBinding
+import com.example.bila_oronyx.pertemuan3.LoginOronyx
+import com.example.bila_oronyx.R
 import com.example.bila_oronyx.databinding.ActivityWelcomeBinding
 
 class Welcome : AppCompatActivity() {

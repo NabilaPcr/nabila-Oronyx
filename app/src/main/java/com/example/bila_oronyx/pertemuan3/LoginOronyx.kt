@@ -1,6 +1,5 @@
-package com.example.bila_oronyx
+package com.example.bila_oronyx.pertemuan3
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
@@ -8,6 +7,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.bila_oronyx.MainActivity
+import com.example.bila_oronyx.R
 import com.example.bila_oronyx.databinding.ActivityLoginOronyxBinding
 
 class LoginOronyx : AppCompatActivity() {
@@ -25,7 +26,7 @@ class LoginOronyx : AppCompatActivity() {
             insets
         }
 
-        val sharedPref = getSharedPreferences("user_pref", Context.MODE_PRIVATE)
+        val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
 
         binding.btnLogin.setOnClickListener {
             val username = binding.inputUser.text.toString().trim()

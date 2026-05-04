@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_background_light_pastel"
-    tools:context=".ListBelajar">
+    tools:context=".pertemuan4.ListBelajar">
 
     <View
         android:id="@+id/headerView"
