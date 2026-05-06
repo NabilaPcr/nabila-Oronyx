@@ -6,14 +6,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0F172A"
+    android:background="#2B612D"
     tools:context=".BeritaWebActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#0F172A"
+        android:background="#183A19"
         app:elevation="0dp">
 
         <androidx.appcompat.widget.Toolbar
@@ -28,8 +28,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:indeterminate="true"
-            app:indicatorColor="#F472B6"
-            app:trackColor="#334155"
+            app:indicatorColor="#4CAF50"
+            app:trackColor="#1E561F"
             android:visibility="gone" />
 
     </com.google.android.material.appbar.AppBarLayout>
