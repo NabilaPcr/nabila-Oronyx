@@ -14,6 +14,7 @@
     <color name="kubus_input_background">#F0F8FF</color>
     <color name="text_black_soft">#424242</color>
 
+<!--    SIDA COLOUR-->
     <color name="sida_green">#4CAF50</color>
     <color name="sida_dark_green">#2E7D32</color>
     <color name="sida_red">#D32F2F</color>

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import com.example.bila_oronyx.Setting.SettingFragment
 import com.example.bila_oronyx.About.AboutFragment
 import com.example.bila_oronyx.Home.HomeFragment
 import com.example.bila_oronyx.Profile.ProfileFragment
@@ -28,6 +29,7 @@ class BaseActivity : AppCompatActivity() {
                 R.id.home -> replaceFragment(HomeFragment())
                 R.id.about -> replaceFragment(AboutFragment())
                 R.id.profil -> replaceFragment(ProfileFragment())
+                R.id.setting -> replaceFragment(SettingFragment())
             }
             true
         }
