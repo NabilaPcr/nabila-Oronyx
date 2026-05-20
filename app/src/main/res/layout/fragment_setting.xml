@@ -3,225 +3,250 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4FBF4">
+    android:background="#F7FBF7"> <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"> <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Settings"
+    android:textSize="30sp"
+    android:textStyle="bold"
+    android:textColor="#1B5E20"
+    android:layout_marginBottom="8dp" />
 
-    <LinearLayout
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="20dp">
+        android:layout_marginTop="12dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="#E0EBE0"
+        app:cardBackgroundColor="@color/white">
 
-        <!-- TITLE -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Settings"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            android:textColor="#2E7D32" />
-
-        <!-- APP PREFERENCES -->
-        <com.google.android.material.card.MaterialCardView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="3dp"
-            app:strokeWidth="1dp"
-            app:strokeColor="#E0EBE0"
-            app:cardBackgroundColor="@color/white">
+            android:orientation="vertical"
+            android:padding="16dp">
 
-            <LinearLayout
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="App Preferences"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="#1B5E20"
+                android:letterSpacing="0.05" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
+                android:layout_marginTop="12dp"
+                app:chipSpacingHorizontal="8dp">
 
-                <TextView
+                <com.google.android.material.chip.Chip
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="App Preferences"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:textColor="#1B5E20" />
-
-                <com.google.android.material.chip.ChipGroup
-                    android:id="@+id/chipGroup"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp">
-
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Dark Mode"
-                        android:textColor="#2E7D32"
-                        app:chipBackgroundColor="#E8F5E9"
-                        app:chipStrokeColor="#C8E6C9"
-                        app:chipStrokeWidth="1dp" />
-
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Notifications"
-                        android:textColor="#2E7D32"
-                        app:chipBackgroundColor="#E8F5E9"
-                        app:chipStrokeColor="#C8E6C9"
-                        app:chipStrokeWidth="1dp" />
-
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Auto Update"
-                        android:textColor="#2E7D32"
-                        app:chipBackgroundColor="#E8F5E9"
-                        app:chipStrokeColor="#C8E6C9"
-                        app:chipStrokeWidth="1dp" />
-
-                </com.google.android.material.chip.ChipGroup>
-
-            </LinearLayout>
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <!-- MENU BUTTONS -->
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="3dp"
-            app:strokeWidth="1dp"
-            app:strokeColor="#E0EBE0"
-            app:cardBackgroundColor="@color/white">
-
-            <GridLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:columnCount="2"
-                android:alignmentMode="alignMargins"
-                android:padding="8dp">
-
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="8dp"
-                    android:text="Privacy"
-                    android:textColor="#4CAF50"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                    app:strokeColor="#4CAF50" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="8dp"
-                    android:text="About"
-                    android:textColor="#4CAF50"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                    app:strokeColor="#4CAF50" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="8dp"
-                    android:text="Help"
-                    android:textColor="#4CAF50"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                    app:strokeColor="#4CAF50" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="8dp"
-                    android:text="Contact"
-                    android:textColor="#4CAF50"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                    app:strokeColor="#4CAF50" />
-
-            </GridLayout>
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <!-- LIST MENU -->
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="3dp"
-            app:strokeWidth="1dp"
-            app:strokeColor="#E0EBE0"
-            app:cardBackgroundColor="@color/white">
-
-            <ListView
-                android:id="@+id/listMenu"
-                android:layout_width="match_parent"
-                android:layout_height="220dp"
-                android:divider="#E0EBE0"
-                android:dividerHeight="1dp" />
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <!-- FEEDBACK -->
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="4dp"
-            app:cardBackgroundColor="#2E7D32">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Send Feedback"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:textColor="@color/white" />
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    app:hintTextColor="#E8F5E9"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/inputFeedback"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Write your feedback here"
-                        android:textColor="@color/white"
-                        android:textColorHint="#C8E6C9"
-                        android:backgroundTint="#236026" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnKirim"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Send"
+                    android:text="Dark Mode"
                     android:textColor="#2E7D32"
-                    android:layout_marginTop="12dp"
-                    android:textStyle="bold"
-                    app:backgroundTint="@color/white" />
+                    android:checkable="true"
+                    app:chipBackgroundColor="#E8F5E9"
+                    app:chipStrokeColor="#C8E6C9"
+                    app:chipStrokeWidth="1dp" />
 
-            </LinearLayout>
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notifications"
+                    android:textColor="#2E7D32"
+                    android:checkable="true"
+                    app:chipBackgroundColor="#E8F5E9"
+                    app:chipStrokeColor="#C8E6C9"
+                    app:chipStrokeWidth="1dp" />
 
-        </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Auto Update"
+                    android:textColor="#2E7D32"
+                    android:checkable="true"
+                    app:chipBackgroundColor="#E8F5E9"
+                    app:chipStrokeColor="#C8E6C9"
+                    app:chipStrokeWidth="1dp" />
 
-    </LinearLayout>
+            </com.google.android.material.chip.ChipGroup>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="#E0EBE0"
+        app:cardBackgroundColor="@color/white">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:alignmentMode="alignMargins"
+            android:padding="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:text="Privacy"
+                android:textColor="#2E7D32"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="#C8E6C9"
+                app:cornerRadius="12dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:text="About"
+                android:textColor="#2E7D32"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="#C8E6C9"
+                app:cornerRadius="12dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:text="Help"
+                android:textColor="#2E7D32"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="#C8E6C9"
+                app:cornerRadius="12dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:text="Contact"
+                android:textColor="#2E7D32"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="#C8E6C9"
+                app:cornerRadius="12dp" />
+
+        </GridLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="#E0EBE0"
+        app:cardBackgroundColor="@color/white">
+
+        <ListView
+            android:id="@+id/listMenu"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:divider="#F0F5F0"
+            android:dividerHeight="1dp"
+            android:padding="4dp" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="#2E7D32"
+        app:strokeWidth="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send Feedback"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your insights help us improve this app."
+                android:textSize="12sp"
+                android:textColor="#E8F5E9"
+                android:layout_marginTop="2dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                app:hintEnabled="false"
+                app:boxStrokeColor="@color/white"
+                app:boxStrokeWidth="1dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputFeedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Write your feedback here..."
+                    android:textColor="@color/white"
+                    android:textColorHint="#A5D6A7"
+                    android:inputType="textMultiLine"
+                    android:gravity="top"
+                    android:minLines="2"
+                    android:background="@android:color/transparent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnKirim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit Feedback"
+                android:textColor="#2E7D32"
+                android:layout_marginTop="16dp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/white"
+                app:cornerRadius="12dp" />
+
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>
 
 </ScrollView>
