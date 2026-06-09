@@ -12,9 +12,12 @@
     <color name="deep_purple_button">#5E50A1</color>
     <color name="pastel_input_background">#FFF0F5</color>
     <color name="kubus_input_background">#F0F8FF</color>
-    <color name="text_black_soft">#424242</color>
+    <color name="text_black_soft">#333333</color>
 
-<!--    SIDA COLOUR-->
+    <color name="primary">#4CAF50</color>
+    <color name="gray">#808080</color>
+
+    <!-- SIDA COLOUR -->
     <color name="sida_green">#4CAF50</color>
     <color name="sida_dark_green">#2E7D32</color>
     <color name="sida_red">#D32F2F</color>

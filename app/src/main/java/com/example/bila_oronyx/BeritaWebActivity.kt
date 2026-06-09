@@ -14,12 +14,17 @@ import com.example.bila_oronyx.databinding.ActivityBeritaWebBinding
 
 class BeritaWebActivity : AppCompatActivity() {
     private lateinit var binding: ActivityBeritaWebBinding
+    private var newsUrl: String = ""
+    private var newsTitle: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         binding = ActivityBeritaWebBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        newsUrl = intent.getStringExtra("url") ?: "http://nabila-kebencanaan.alwaysdata.net/"
+        newsTitle = intent.getStringExtra("title") ?: "Sistem Informasi SIDA"
 
         ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -29,7 +34,7 @@ class BeritaWebActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
         supportActionBar?.apply {
-            title = "Sistem Informasi SIDA"
+            title = newsTitle
             setDisplayHomeAsUpEnabled(true)
             setHomeAsUpIndicator(R.drawable.ic_arrow)
         }
@@ -64,16 +69,7 @@ class BeritaWebActivity : AppCompatActivity() {
                 }
             }
 
-            loadUrl("http://nabila-kebencanaan.alwaysdata.net/")
-        }
-
-        // Toolbar Auto-Hide
-        binding.webView.setOnScrollChangeListener { _, _, scrollY, _, oldScrollY ->
-            if (scrollY > oldScrollY) {
-                binding.appBar.setExpanded(false, true)
-            } else if (scrollY < oldScrollY) {
-                binding.appBar.setExpanded(true, true)
-            }
+            loadUrl(newsUrl)
         }
     }
 

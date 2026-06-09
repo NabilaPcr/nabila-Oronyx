@@ -70,7 +70,6 @@ class RegisterActivity : AppCompatActivity() {
             }
 
             if (isValid) {
-                // Simpan ke SharedPreferences
                 val sharedPref = getSharedPreferences("user_data", MODE_PRIVATE)
                 val editor = sharedPref.edit()
                 editor.putString("nama", nama)
