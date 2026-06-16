@@ -11,10 +11,10 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.bila_oronyx.BeritaWebActivity
 import com.example.bila_oronyx.databinding.FragmentHomeBinding
-import com.example.bila_oronyx.pertemuan2.RumusBangun
-import com.example.bila_oronyx.pertemuan3.LoginOronyx
-import com.example.bila_oronyx.pertemuan4.ListBelajar
-import com.example.bila_oronyx.pertemuan_10.WargaActivity
+import com.example.bila_oronyx.Home.pertemuan2.RumusBangun
+import com.example.bila_oronyx.Home.pertemuan3.LoginOronyx
+import com.example.bila_oronyx.Home.pertemuan4.ListBelajar
+import com.example.bila_oronyx.Home.pertemuan_10.WargaActivity
 import com.example.bila_oronyx.Home.news.NewsAdapter
 // PERBAIKAN 1: Menyesuaikan package import ApiClient yang benar
 import com.example.bila_oronyx.data.api.NewsApiClient

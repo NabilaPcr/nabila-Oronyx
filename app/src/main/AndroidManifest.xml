@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -14,49 +15,76 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BilaOronyx"
         android:usesCleartextTraffic="true">
-        <activity
-            android:name=".Onboard.OnboardActivity"
-            android:exported="false" />
-        <activity
-            android:name=".pertemuan_10.WargaActivity"
-            android:exported="false"
-            android:theme="@style/Theme.BilaOronyx" />
-        <activity
-            android:name=".SplashScreenActivity"
-            android:exported="false" />
+
+        <!-- ======== ACTIVITY UTAMA (LAUNCHER) ======== -->
         <activity
             android:name=".BaseActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- ======== SPLASH & ONBOARD ======== -->
         <activity
-            android:name=".BeritaWebActivity"
+            android:name=".SplashScreenActivity"
             android:exported="false" />
         <activity
-            android:name=".pertemuan3.Welcome"
+            android:name=".Onboard.OnboardActivity"
+            android:exported="false" />
+
+        <!-- ======== PERTEMUAN 3 (LOGIN & REGISTER) ======== -->
+        <activity
+            android:name=".Home.pertemuan3.LoginOronyx"
+            android:exported="false" />
+
+        <!-- 🔥🔥🔥 TAMBAHKAN INI 🔥🔥🔥 -->
+        <activity
+            android:name=".Home.pertemuan3.Register"
+            android:exported="false" />
+
+        <activity
+            android:name=".Home.pertemuan3.Welcome"
+            android:exported="false" />
+
+        <!-- ======== PERTEMUAN 2 ======== -->
+        <activity
+            android:name=".Home.pertemuan2.RumusBangun"
+            android:exported="false" />
+
+        <!-- ======== PERTEMUAN 4 ======== -->
+        <activity
+            android:name=".Home.pertemuan4.ListBelajar"
             android:exported="false" />
         <activity
-            android:name=".pertemuan4.ListBelajar"
+            android:name=".Home.pertemuan4.Profil"
             android:exported="false" />
+
+        <!-- ======== PERTEMUAN 10 ======== -->
         <activity
-            android:name=".pertemuan4.Profil"
-            android:exported="false" />
-        <activity
-            android:name=".pertemuan3.LoginOronyx"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
+            android:name=".Home.pertemuan_10.WargaActivity"
+            android:exported="false"
+            android:theme="@style/Theme.BilaOronyx" />
+
+        <!-- ======== BERITA ======== -->
         <activity
             android:name=".BeritaActivity"
             android:exported="false" />
         <activity
-            android:name=".pertemuan2.RumusBangun"
+            android:name=".BeritaWebActivity"
             android:exported="false" />
+
+        <!-- ======== NOTE ======== -->
+        <activity
+            android:name=".NoteFormActivity"
+            android:exported="false" />
+
+        <!-- ======== MAIN ACTIVITY ======== -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>

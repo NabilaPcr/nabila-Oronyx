@@ -8,10 +8,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.bila_oronyx.databinding.ActivityMainBinding
-import com.example.bila_oronyx.pertemuan2.RumusBangun
-import com.example.bila_oronyx.pertemuan3.LoginOronyx
-import com.example.bila_oronyx.pertemuan4.ListBelajar
-import com.example.bila_oronyx.pertemuan4.Profil
+import com.example.bila_oronyx.Home.pertemuan2.RumusBangun
+import com.example.bila_oronyx.Home.pertemuan3.LoginOronyx
+import com.example.bila_oronyx.Home.pertemuan4.ListBelajar
+import com.example.bila_oronyx.Home.pertemuan4.Profil
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 

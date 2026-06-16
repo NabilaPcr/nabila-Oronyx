@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Basic Colors -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="gray">#808080</color>
+
+    <!-- SIDA PRIMARY PALETTE -->
+    <color name="sida_green">#4CAF50</color>
+    <color name="sida_dark_green">#2E7D32</color>
+    <color name="sida_light_green">#81C784</color>
+    <color name="sida_very_light_green">#E8F5E9</color>
+
+    <!-- SIDA ACCENT COLORS -->
+    <color name="sida_red">#D32F2F</color>
+    <color name="sida_orange">#FF9800</color>
+    <color name="sida_blue">#2196F3</color>
+
+    <!-- SIDA BACKGROUND -->
+    <color name="sida_bg_light">#F1F8E9</color>
+    <color name="sida_bg_white">#FFFFFF</color>
+
+    <!-- SIDA TEXT -->
+    <color name="sida_text_dark">#1B5E20</color>
+    <color name="sida_text_medium">#4CAF50</color>
+    <color name="sida_text_light">#81C784</color>
+    <color name="sida_text_black">#333333</color>
+
+    <!-- SIDA CARD & ELEMENTS -->
+    <color name="cardview_light_background">#FFFFFF</color>
+    <color name="sida_card_shadow">#2E7D32</color>
+    <color name="sida_divider">#C8E6C9</color>
+
+    <!-- Legacy (keep for compatibility) -->
     <color name="soft_purple">#CE93D8</color>
     <color name="light_lavender">#B299FF</color>
     <color name="deep_purple">#5E50A1</color>
@@ -13,13 +43,5 @@
     <color name="pastel_input_background">#FFF0F5</color>
     <color name="kubus_input_background">#F0F8FF</color>
     <color name="text_black_soft">#333333</color>
-
     <color name="primary">#4CAF50</color>
-    <color name="gray">#808080</color>
-
-    <!-- SIDA COLOUR -->
-    <color name="sida_green">#4CAF50</color>
-    <color name="sida_dark_green">#2E7D32</color>
-    <color name="sida_red">#D32F2F</color>
-    <color name="sida_bg_light">#F5F5F5</color>
 </resources>

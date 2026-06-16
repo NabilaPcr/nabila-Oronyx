@@ -9,7 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import com.example.bila_oronyx.R
-import com.example.bila_oronyx.pertemuan3.LoginOronyx
+import com.example.bila_oronyx.Home.pertemuan3.LoginOronyx
 
 
 class Page3Fragment : Fragment() {

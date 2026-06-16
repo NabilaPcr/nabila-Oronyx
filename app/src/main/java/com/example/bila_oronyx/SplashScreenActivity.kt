@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.example.bila_oronyx.pertemuan3.LoginOronyx
+import com.example.bila_oronyx.Home.pertemuan3.LoginOronyx
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 

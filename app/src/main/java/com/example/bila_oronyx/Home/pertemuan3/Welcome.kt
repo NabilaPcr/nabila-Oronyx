@@ -1,4 +1,4 @@
-package com.example.bila_oronyx.pertemuan4
+package com.example.bila_oronyx.Home.pertemuan3
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,24 +6,29 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.bila_oronyx.MainActivity
 import com.example.bila_oronyx.R
-import com.example.bila_oronyx.databinding.ActivityListBelajarBinding
+import com.example.bila_oronyx.databinding.ActivityWelcomeBinding
 
-class ListBelajar : AppCompatActivity() {
-    private lateinit var binding: ActivityListBelajarBinding
+class Welcome : AppCompatActivity() {
+    private lateinit var binding: ActivityWelcomeBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        binding = ActivityListBelajarBinding.inflate(layoutInflater)
+        binding = ActivityWelcomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        binding.btnBackMain.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+
+       binding.btnKembali.setOnClickListener {
+            val intent = Intent(this, LoginOronyx::class.java)
+            startActivity(intent)
+        }
+        binding.btnRegis.setOnClickListener {
+            val intent = Intent(this, LoginOronyx::class.java)
             startActivity(intent)
         }
     }

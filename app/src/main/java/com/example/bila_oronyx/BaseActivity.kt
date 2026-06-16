@@ -42,6 +42,11 @@ class BaseActivity : AppCompatActivity() {
                 R.id.about -> replaceFragment(AboutFragment())
                 R.id.profil -> replaceFragment(ProfileFragment())
                 R.id.setting -> replaceFragment(SettingFragment())
+                R.id.note -> {
+                    replaceFragment(FragmentNote())
+                    true
+                }
+
             }
             true
         }

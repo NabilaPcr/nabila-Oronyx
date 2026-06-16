@@ -26,6 +26,8 @@ class SettingFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        // ======== DATA MENU ========
         val titles = arrayOf(
             "Tampilan & Kecerahan",
             "Notifikasi & Suara",
@@ -35,13 +37,14 @@ class SettingFragment : Fragment() {
         )
 
         val subtitles = arrayOf(
-            "Atur tingkat kecerahan layar dan tema aplikasi",
-            "Kelola nada dering, getaran, dan pop-up peringatan",
-            "Ubah bahasa utama aplikasi (Indonesia / English)",
-            "Ganti PIN, sidik jari, dan privasi akun Anda",
-            "Bersihkan cache dan kelola sisa memori penyimpanan"
+            "Atur kecerahan layar dan tema",
+            "Kelola nada dering dan notifikasi",
+            "Ubah bahasa aplikasi",
+            "Ganti PIN dan privasi akun",
+            "Kelola cache dan penyimpanan"
         )
 
+        // ======== SETUP LISTVIEW ========
         val dataList = ArrayList<HashMap<String, String>>()
         for (i in titles.indices) {
             val map = HashMap<String, String>()
@@ -56,26 +59,28 @@ class SettingFragment : Fragment() {
         val adapter = SimpleAdapter(
             requireContext(),
             dataList,
-            R.layout.list_item_settings, // Cetakan kustom buatanmu
+            R.layout.list_item_settings,
             from,
             to
         )
 
         binding.listMenu.adapter = adapter
+
+        // ======== KLIK MENU ========
         binding.listMenu.setOnItemClickListener { _, _, position, _ ->
             val menuTerpilih = titles[position]
             Snackbar.make(view, "Membuka: $menuTerpilih", Snackbar.LENGTH_SHORT).show()
         }
 
-
+        // ======== KIRIM FEEDBACK ========
         binding.btnKirim.setOnClickListener {
             val feedback = binding.inputFeedback.text.toString().trim()
 
             if (feedback.isNotEmpty()) {
-                Snackbar.make(view, "Feedback dikirim!", Snackbar.LENGTH_SHORT).show()
+                Snackbar.make(view, "Terima kasih! Feedback dikirim 🙏", Snackbar.LENGTH_SHORT).show()
                 binding.inputFeedback.text?.clear()
             } else {
-                Snackbar.make(view, "Isi feedback dulu", Snackbar.LENGTH_SHORT).show()
+                Snackbar.make(view, "Tulis feedback dulu ya 😊", Snackbar.LENGTH_SHORT).show()
             }
         }
     }
