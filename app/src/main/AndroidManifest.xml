@@ -4,6 +4,10 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM"/>
+
 
     <application
         android:allowBackup="true"
@@ -15,6 +19,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BilaOronyx"
         android:usesCleartextTraffic="true">
+
+        <receiver
+            android:name=".utils.ReminderReceiver"
+            android:exported="false"/>
 
         <!-- ======== ACTIVITY UTAMA (LAUNCHER) ======== -->
         <activity
@@ -39,7 +47,6 @@
             android:name=".Home.pertemuan3.LoginOronyx"
             android:exported="false" />
 
-        <!-- 🔥🔥🔥 TAMBAHKAN INI 🔥🔥🔥 -->
         <activity
             android:name=".Home.pertemuan3.Register"
             android:exported="false" />

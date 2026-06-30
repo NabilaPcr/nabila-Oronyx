@@ -154,7 +154,7 @@
             android:layout_height="60dp"
             android:layout_marginEnd="24dp"
             android:layout_marginStart="12dp"
-            android:text="Pertemuan 10 (Warga)"
+            android:text="Warga"
             android:fontFamily="@font/redrose"
             android:textAllCaps="false"
             app:backgroundTint="@color/sida_dark_green"

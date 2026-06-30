@@ -6,6 +6,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.bila_oronyx.Home.HomeFragment
 import com.example.bila_oronyx.MainActivity
 import com.example.bila_oronyx.R
 import com.example.bila_oronyx.databinding.ActivityListBelajarBinding
@@ -23,7 +24,7 @@ class ListBelajar : AppCompatActivity() {
             insets
         }
         binding.btnBackMain.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, HomeFragment::class.java)
             startActivity(intent)
         }
     }

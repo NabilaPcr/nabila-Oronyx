@@ -26,7 +26,6 @@ class NoteAdapter(
             tvTitle.text = note.title
             tvContent.text = note.content
 
-            // Tombol Delete
             btnDelete.setOnClickListener {
                 MaterialAlertDialogBuilder(holder.itemView.context)
                     .setTitle("Hapus Catatan")

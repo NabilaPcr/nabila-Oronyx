@@ -21,6 +21,7 @@ import com.example.bila_oronyx.data.api.NewsApiClient
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.coroutines.launch
 import android.widget.Toast
+import com.example.bila_oronyx.Profile.ProfileFragment
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
@@ -66,7 +67,7 @@ class HomeFragment : Fragment() {
         }
 
         binding.btnProfil.setOnClickListener {
-            Toast.makeText(requireContext(), "Fitur Profil akan segera hadir", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(requireContext(), ProfileFragment::class.java))
         }
 
         binding.btnLogout.setOnClickListener {
